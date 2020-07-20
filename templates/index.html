@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Heart Attack Prediction</title>
+	<style type="text/css">
+	</style>
+</head>
+<body bgcolor="#bedfe0">
+
+<form action="http://localhost:5000/res" method="post">
+<table align="center">
+	<caption>
+		<h1 style="color: red" >Heart Stroke Prediction</h1>
+	</caption>
+	<tr>
+	<td>
+		<label for="thal">Beta Thalassemia(thal):</label></td>
+	<td>
+		<select id="thal" name = "thal">
+		<option value = "1">normal</option>
+		<option value = "2">fixed defect</option>
+		<option value = "3">reversable defect</option>
+		</select>
+	</td>
+	</tr>
+	<tr>
+	<td><label for="thalach">Maximum Heart Rate Acheived(thalach)</label></td>
+	<td><input type="input" id="thalach" name = "thalach" required>[71 - 202]</td>
+	</tr>
+	<tr>
+	<td><label for="slope">Slope of the peak exercise ST segment(slope)</label></td>
+	<td><select id="slope" name = "slope" required>
+		<option value="0">0</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+	</select></td></tr>
+	<tr><td><label for="exang">Exercise induced angina(exang)</label></td>
+	<td><select id = "exang" name = "exang" required>
+		<option value="1">Yes</option>
+		<option value="0">No</option>
+	</select></td></tr>
+	<tr><td><label for="cp">Chest Pain Type(cp)</label></td>
+	<td><select id="cp" name="cp" required>
+		<option value="0">0</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+	</select></td></tr>
+	<tr><td><label for="oldpeak">ST depression induced by exercise relative to rest(oldpeak)</label></td>
+	<td><input type="input" name="oldpeak" id="oldpeak" required>[0-7]</td></tr>
+	<tr><td><label for="ca">number of major vessels colored by flourosopy(ca)</label></td>
+	<td><input type="input" name="ca" id="ca" required>[0-4]</td></tr>
+	<tr><td><label for="sex">Gender</label></td>
+	<td><select name="sex" id="sex" required>
+		<option value="1">Male</option>
+		<option value="0">Female</option>
+	</select></td>
+	</tr>
+	<tr align="center">
+	<td align="center"><input align="center"  type="submit" name="submit"></td></tr>
+	</table>
+</form>
+<img src ="{{url_for('static', filename='heart.jpeg')}}" style="display: block;
+  margin-left: auto;
+  margin-right: auto;" alt="Heart Image Here" width="400px" height="300px">
+</body>
+</html>

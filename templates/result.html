@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+</head>
+<body bgcolor="#bedfe0">
+	<h1 align="center">RESULT</h1>
+	{% if result == 1%}
+		<h2 align="center"> Chance of Heart Stroke </h2>
+		{% for key,value in dict1.items() %}
+			{% if value != ""%}
+			<p align="center">{{ key }}: {{ value }}</p>
+			{% endif %}
+		{% endfor %}
+	{% else %}
+		<h2 align="center"> No chance of Heart Stroke</h2>
+	{% endif %} 
+</body>
+</html>
